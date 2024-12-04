@@ -66,3 +66,11 @@ const styles = StyleSheet.create({
 });
 
 export default Input;
+
+
+
+{/* <Input
+label="Title"
+name="title"
+placeholder="Enter Document Title"
+/> */}

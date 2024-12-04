@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Platform } from 'react-native';
+import { StyleSheet, Image, Platform, TouchableOpacity, Text } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -6,6 +6,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { router } from 'expo-router';
 
 export default function TabTwoScreen() {
   return (
@@ -88,9 +89,13 @@ export default function TabTwoScreen() {
               The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
               component provides a parallax effect for the header image.
             </ThemedText>
+
+            
           ),
         })}
+        
       </Collapsible>
+      <TouchableOpacity onPress={() => router.push('/')}><Text>helloooo</Text></TouchableOpacity>
     </ParallaxScrollView>
   );
 }

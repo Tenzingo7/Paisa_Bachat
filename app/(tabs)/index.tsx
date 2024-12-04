@@ -1,9 +1,10 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform, TouchableOpacity, Text } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { router } from 'expo-router';
 
 export default function HomeScreen() {
   return (
@@ -48,6 +49,9 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
           <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
+          <TouchableOpacity onPress={() => router.push('/explore')}><Text>helloooo</Text></TouchableOpacity>
+          <TouchableOpacity onPress={() => router.push('/dashboard')}><Text>dashboard</Text></TouchableOpacity>
+
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
